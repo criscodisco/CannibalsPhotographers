@@ -3,12 +3,14 @@ package com.cannibal_photographer;
 import android.app.Activity;
 import android.os.Bundle;
 import android.view.Menu;
-import android.view.View;
-import android.view.View.OnClickListener;
+import android.widget.ImageView;
 
 
 
-public class MainActivity extends Activity implements OnClickListener{
+public class MainActivity extends Activity {
+	
+	
+	//OnClickListener boatForwardListener;
 	
 	
 	
@@ -17,9 +19,12 @@ public class MainActivity extends Activity implements OnClickListener{
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		ImageView boatimage = (ImageView)findViewById(R.id.imageView1);
 		
-		Boat boat = new Boat(this, null);
-		boat.setOnClickListener(this);
+		Boat boatobject = new Boat(this, null);
+		
+		boatobject.moveBoatForward(boatimage); 
+		
 		
 	}
 
@@ -29,14 +34,6 @@ public class MainActivity extends Activity implements OnClickListener{
 		getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
-
-	@Override
-	public void onClick(View arg0) {
-		// TODO Auto-generated method stub
-		
-	}
-
-	
 
 
 }
