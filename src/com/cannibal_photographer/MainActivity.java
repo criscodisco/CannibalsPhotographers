@@ -26,7 +26,7 @@ public class MainActivity extends Activity {
 		int drawBottom = r.bottom;
 		//ImageView boatimage2 = (ImageView)findViewById(R.id.imageView2);
 		
-		Boat boatobject = new Boat(this, null);
+		Boat boatobject = new Boat(this, null, boatimage);
 		
 		int y = boatimage.getBottom();
 		

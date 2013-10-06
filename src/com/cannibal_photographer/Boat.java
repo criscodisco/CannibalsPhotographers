@@ -12,7 +12,7 @@ public class Boat extends ImageView {
 	
 	int state = 0;
 	
-	public Boat(Context context, AttributeSet attrs) {
+	public Boat(Context context, AttributeSet attrs, ImageView boatimage) {
         super(context, attrs);
         
     }
