@@ -67,9 +67,4 @@
     	android:layout_marginRight="14dp"
     	android:src="@drawable/boat" />
    
-
-    
-
-  
-
 </RelativeLayout>

@@ -10,9 +10,7 @@ import android.widget.ImageView;
 
 public class Boat extends ImageView {
 	
-	
 	boolean state = true;
-	
 	
 	public Boat(Context context) {
         super(context);
@@ -31,7 +29,6 @@ public class Boat extends ImageView {
 	        init();
 	    }
 
-	
     private void init()
     {
         this.setOnClickListener(new OnClickListener() {
@@ -59,8 +56,6 @@ public class Boat extends ImageView {
         this.offsetTopAndBottom(amount);
         state = !state;
 	}
-	
-   
 }
 
 
