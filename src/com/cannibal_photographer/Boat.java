@@ -9,13 +9,31 @@ import android.widget.ImageView;
 
 public class Boat extends ImageView {
 	
-	ImageView boatimage;
+	
 	boolean state = true;
 	
-	public Boat(Context context, AttributeSet attrs, ImageView boatimage) {
-        super(context, attrs);
-        boatimage = (ImageView)findViewById(R.id.imageView1);
-        boatimage.setOnClickListener(new OnClickListener() {
+	
+	public Boat(Context context) {
+        super(context);
+        init();
+	}
+	
+	 public Boat(Context context, AttributeSet attrs)
+	    {
+	        super(context, attrs);
+	        init();
+	    }
+
+	 public Boat(Context context, AttributeSet attrs, int defStyle)
+	    {
+	        super(context, attrs, defStyle);
+	        init();
+	    }
+
+	
+    private void init()
+    {
+        this.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick (View v) {
                 if (state) {
@@ -26,15 +44,16 @@ public class Boat extends ImageView {
 			}
         });
     }
+    
    
 
 	public void moveBoatForward(int amount){
-        boatimage.offsetTopAndBottom(amount);
+        this.offsetTopAndBottom(amount);
         state = !state;
 	}
 	
     public void moveBoatReverse(int amount) {
-        boatimage.offsetTopAndBottom(290);
+        this.offsetTopAndBottom(amount);
         state = !state;
 	}
 

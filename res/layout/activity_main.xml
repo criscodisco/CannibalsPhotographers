@@ -57,35 +57,19 @@
         android:layout_toRightOf="@+id/imageButton5"
         android:src="@drawable/greensquare" />
 
-    <ImageView
-        android:id="@+id/imageView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_above="@+id/imageButton4"
-        android:layout_alignRight="@+id/imageButton5"
-        android:layout_marginBottom="102dp"
-        android:layout_marginRight="14dp"
-        android:src="@drawable/boat" />
+    <com.cannibal_photographer.Boat
+    	android:id="@+id/imageView1"
+    	android:layout_width="wrap_content"
+    	android:layout_height="wrap_content"
+    	android:layout_above="@+id/imageButton4"
+    	android:layout_alignRight="@+id/imageButton5"
+    	android:layout_marginBottom="102dp"
+    	android:layout_marginRight="14dp"
+    	android:src="@drawable/boat" />
    
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:visibility="invisible"
-        android:layout_alignLeft="@+id/imageView1"
-        android:layout_alignTop="@+id/imageView2"
-        android:layout_marginTop="135dp"
-        android:src="@drawable/boat" />
+    
 
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/imageButton2"
-        android:layout_alignTop="@+id/imageView2"
-        android:layout_marginRight="14dp"
-        android:layout_marginTop="16dp"
-        android:text="TextView" />
+  
 
 </RelativeLayout>
