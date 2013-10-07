@@ -5,6 +5,7 @@ package com.cannibal_photographer;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.View;
+import android.view.animation.TranslateAnimation;
 import android.widget.ImageView;
 
 public class Boat extends ImageView {
@@ -37,26 +38,29 @@ public class Boat extends ImageView {
             @Override
             public void onClick (View v) {
                 if (state) {
-				    moveBoatForward(-290);
+				    moveBoat(-290);
                 } else {
-                    moveBoatReverse(290);
+                    moveBoat(290);
                 }
 			}
         });
     }
     
-   
+    //TranslateAnimation animation;
+    //TranslateAnimation animation2;
 
-	public void moveBoatForward(int amount){
+	public void moveBoat(int amount){
+		/*
+		animation = new TranslateAnimation(0, 0, 0, amount);
+		animation.setDuration(250);
+		animation.setFillAfter(true);
+		this.startAnimation(animation);
+		*/
         this.offsetTopAndBottom(amount);
         state = !state;
 	}
 	
-    public void moveBoatReverse(int amount) {
-        this.offsetTopAndBottom(amount);
-        state = !state;
-	}
-
+   
 }
 
 
