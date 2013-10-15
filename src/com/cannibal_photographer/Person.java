@@ -5,22 +5,22 @@ import android.util.AttributeSet;
 import android.view.View;
 import android.widget.ImageView;
 
-public class Boat extends ImageView {
+public class Person extends ImageView {
 	
 	boolean state = true;
 	
-	public Boat(Context context) {
+	public Person(Context context) {
         super(context);
         init();
 	}
 	
-	 public Boat(Context context, AttributeSet attrs)
+	 public Person(Context context, AttributeSet attrs)
 	    {
 	        super(context, attrs);
 	        init();
 	    }
 
-	 public Boat(Context context, AttributeSet attrs, int defStyle)
+	 public Person(Context context, AttributeSet attrs, int defStyle)
 	    {
 	        super(context, attrs, defStyle);
 	        init();
@@ -32,28 +32,22 @@ public class Boat extends ImageView {
             @Override
             public void onClick (View v) {
                 if (state) {
-				    moveBoat(-290);
+				    movePerson(325,-230);
                 } else {
-                    moveBoat(290);
+                    movePerson(-325,230);
                 }
 			}
         });
+        
+	
     }
     
-    //TranslateAnimation animation;
-    //TranslateAnimation animation2;
+    public void movePerson(int x, int y)
+    {
+    	this.offsetLeftAndRight(x);
+    	this.offsetTopAndBottom(y);
+    	
+    	state = !state;
+    }
 
-	public void moveBoat(int amount){
-		/*
-		animation = new TranslateAnimation(0, 0, 0, amount);
-		animation.setDuration(250);
-		animation.setFillAfter(true);
-		this.startAnimation(animation);
-		*/
-        this.offsetTopAndBottom(amount);
-        state = !state;
-	}
 }
-
-
-

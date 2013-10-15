@@ -10,7 +10,8 @@ public class MainActivity extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);		
-		Boat boatobject = (Boat)findViewById(R.id.imageView1);			
+		Boat boatobject = (Boat)findViewById(R.id.boatimageView);	
+		Person personobject = (Person)findViewById(R.id.personView1);
 	}
 	
 	@Override
