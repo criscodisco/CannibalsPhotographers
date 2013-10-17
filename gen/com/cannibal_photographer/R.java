@@ -28,12 +28,15 @@ public final class R {
         public static final int redsquare=0x7f020004;
     }
     public static final class id {
-        public static final int action_settings=0x7f080002;
+        public static final int action_settings=0x7f080003;
         public static final int boatimageView=0x7f080001;
-        public static final int personView1=0x7f080000;
+        public static final int framelayoutView=0x7f080000;
+        public static final int personView1=0x7f080002;
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
+        public static final int boatlayout=0x7f030001;
+        public static final int personlayout=0x7f030002;
     }
     public static final class menu {
         public static final int main=0x7f070000;
